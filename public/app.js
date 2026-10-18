@@ -457,11 +457,11 @@ input.addEventListener('input', () => {
   requestAnalyze(false);
 });
 input.addEventListener('keydown', (e) => {
-  // textarea: plain Enter is a newline; ⌘/Ctrl-Enter forces an immediate analysis
+  // textarea: plain Enter is a newline; ⌘/Ctrl-Enter commits this query —
+  // runs analysis immediately and records it in recents
   if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
     e.preventDefault();
-    undoStack.length = 0;
-    requestAnalyze(true);
+    form.requestSubmit();
   }
 });
 undoBtn.addEventListener('click', undoSwap);
