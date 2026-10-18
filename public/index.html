@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mandarin Breakdown</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Mandarin Breakdown</h1>
+    <p class="tag">whole sentence · words · characters · radicals — pieces without the guessing</p>
+  </header>
+
+  <form id="analyze-form">
+    <textarea id="input" rows="2" spellcheck="false" placeholder="paste Mandarin — 营养丰富打折">营养丰富打折</textarea>
+    <div class="actions">
+      <button id="btn-undo" type="button" disabled title="undo last character swap">↺ undo swap</button>
+      <span id="status"></span>
+      <span class="hint">auto-analyzes as you type — click any character for radicals, components &amp; homophones</span>
+    </div>
+    <div id="recent" class="chips"></div>
+  </form>
+
+  <main class="columns">
+    <section id="output">
+      <div id="whole" class="card hidden"></div>
+      <div id="segments" class="card hidden"></div>
+      <div id="intro" class="card">
+        <p><b>How it works:</b> paste Mandarin text above.</p>
+        <ul>
+          <li>「whole」— Google Translate's rendering of the sentence, plus its alternate dictionary senses.</li>
+          <li>「pieces」— an expandable tree: words → characters → radical + components. Every part is text-labeled (radical / part / tone number), so no meaning hides in a color.</li>
+          <li>Pinyin shows tone marks <i>and</i> superscript tone numerals (yíng²), tones never rely on color.</li>
+          <li>Click a character for its definition, etymology, frequently-seen words and sounding-alike characters (swap chips).</li>
+        </ul>
+      </div>
+      <div id="error" class="hidden"></div>
+    </section>
+    <aside id="panel" class="card panel hidden"></aside>
+  </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

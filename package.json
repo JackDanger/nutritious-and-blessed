@@ -1,0 +1,12 @@
+{
+  "name": "nutritious-and-blessed",
+  "version": "0.1.0",
+  "description": "Local Mandarin breakdown tool: segmentation, pinyin, glosses, radicals, character decomposition, and character-swapping experiments.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/build-data.mjs",
+    "setup:force": "node scripts/build-data.mjs --force",
+    "start": "node server.js"
+  }
+}
